@@ -11,3 +11,9 @@ class TestMainClass:
         result = main_class.get_class_number()
 
         assert result > 45, "Ошибка: метод get_class_number должен возвращать число больше 45"
+
+    def test_get_class_string(self):
+        main_class = MainClass()
+        result = main_class.get_class_string()
+
+        assert "hello" in result.lower(), "Ошибка: метод get_class_string не содержит подстроки 'hello' или 'Hello'"
